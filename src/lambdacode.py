@@ -1,7 +1,9 @@
 import boto3
 import json
+import os
 
-dynamodb = boto3.resource('dynamodb')
+region = os.getenv('AWS_REGION', 'us-east-2')  # fallback region if none set in env
+dynamodb = boto3.resource('dynamodb', region_name=region)
 table = dynamodb.Table('visitor-counter')
 
 def lambda_handler(event, context):
