@@ -11,3 +11,9 @@ output "visitor_counter_api_endpoint" {
   value       = aws_apigatewayv2_api.visitor_counter_api.api_endpoint
   description = "The HTTP endpoint for the visitor counter API"
 }
+
+#add output for cloudfront distribution ID
+output "cloudfront_distribution_id" {
+  value       = aws_cloudfront_distribution.website.id
+  description = "The ID of the CloudFront distribution"
+}
