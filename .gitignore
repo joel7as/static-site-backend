@@ -1,0 +1,2 @@
+# Ignore Lambda deployment zip
+/src/lambdacode.py.zip
